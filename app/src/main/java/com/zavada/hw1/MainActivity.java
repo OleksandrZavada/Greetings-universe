@@ -26,10 +26,9 @@ public class MainActivity extends Activity implements OnClickListener {
         btnActTwo = (Button) findViewById(R.id.btnActTwo);
         btnActTwo.setOnClickListener(this);
 
-
-
-
-
+        if( getIntent().getBooleanExtra("Exit me", false)){
+            finish();
+        }
 
     }
 
