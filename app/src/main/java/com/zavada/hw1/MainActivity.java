@@ -15,9 +15,11 @@ import java.io.FileInputStream;
 
 public class MainActivity extends Activity implements OnClickListener {
 
+
+
     Button btnActTwo;
 
-    /** Called when the activity is first created. */
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +28,10 @@ public class MainActivity extends Activity implements OnClickListener {
         btnActTwo = (Button) findViewById(R.id.btnActTwo);
         btnActTwo.setOnClickListener(this);
 
-        if( getIntent().getBooleanExtra("Exit me", false)){
-            finish();
-        }
+
 
     }
+
 
     @Override
     public void onClick(View v) {
@@ -43,4 +44,5 @@ public class MainActivity extends Activity implements OnClickListener {
                 break;
         }
     }
+
 }

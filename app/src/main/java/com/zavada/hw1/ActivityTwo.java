@@ -11,10 +11,16 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
     Button btnActOne;
     Button btn1;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
+
+        if (getIntent().getBooleanExtra("EXIT", false)) {
+            finish();
+        }
 
         btnActOne = (Button) findViewById(R.id.btnActOne);
         btnActOne.setOnClickListener(this);
@@ -30,11 +36,15 @@ public class ActivityTwo extends AppCompatActivity implements View.OnClickListen
                 startActivity(intent);
                 break;
             case R.id.btn1:
-                finish();
-                System.exit(1);
+                Intent intent1 = new Intent(this, ActivityThird.class);
+                startActivity(intent1);
+
+                break;
             default:
                 break;
         }
 
     }
+
+
 }
